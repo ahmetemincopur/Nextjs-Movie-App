@@ -2,11 +2,11 @@ import React from 'react'
 
 const Card = ({movie}) => {
   return (
-    <div className="relative flex flex-col mt-6 text-gray-700 bg-white shadow-md bg-clip-border rounded-xl max-w-lg">
+    <div className="relative flex flex-col mt-6 text-gray-700 bg-white shadow-md bg-clip-border rounded-xl w-1/6 min-w-64">
   <div
-    className="relative h-56 mx-4 -mt-6 overflow-hidden text-white shadow-lg bg-clip-border rounded-xl bg-blue-gray-500 shadow-blue-gray-500/40">
+    className="relative max-h-fit mx-4 -mt-6 overflow-hidden text-white shadow-lg bg-clip-border rounded-xl bg-blue-gray-500 shadow-blue-gray-500/40">
     <img
-      src={`https://image.tmdb.org/t/p/original/${movie?.backdrop_path || movie?.poster_path}`}
+      src={`https://image.tmdb.org/t/p/original/${ movie?.poster_path || movie?.backdrop_path}`}
       alt="card-image" />
   </div>
   <div className="p-6">

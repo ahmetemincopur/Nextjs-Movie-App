@@ -14,8 +14,8 @@ const Page = async() => {
         const results = data.results;
   return (
     <>
-        <div className="m-10 w-1/6">
-        <h1 className="font-bold text-2xl text-end">Popular Movies</h1>
+        <div className="flex mt-10 justify-center w-full">
+        <h1 className="font-bold text-2xl text-start">Popular Movies</h1>
         </div>
            
             <div className="flex flex-row gap-10 mt-6 text-gray-700 bg-white shadow-md bg-clip-border rounded-xl flex-wrap justify-center">
