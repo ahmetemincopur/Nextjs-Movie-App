@@ -1,27 +1,34 @@
-"use client"
+"use client";
 import { useState } from "react";
 import { MdChevronLeft, MdChevronRight } from "react-icons/md";
 
-export default function Slider({children: slidingCards}){
-    const [current, setCurrent] = useState(0);
+export default function Slider({ children: Cards }) {
+  const [current, setCurrent] = useState(0);
 
-    console.log("Current value:", current);
-    console.log(slidingCards.length-1)
-
-    const prev =() => setCurrent((current=>current==0?0: current-1))
-    const next =() => setCurrent((current=>current==3 ? 0: current+1))
-    return (
-        <div className="overflow-hidden relative">
-            <div className="flex transition-transform ease-out duration-500" style={{transform: `translateX(-${current*100}%)`}}>{slidingCards}</div>
-            <div className="absolute inset-0 flex items-center justify-between p-4">
-                <button onClick={prev} className="p-1 rounded-full shadow bg-white/80 text-gray-800 hover:bg-white">
-                    <MdChevronLeft size={120}/>
-                </button>
-                <button onClick={next} className="p-1 rounded-full shadow bg-white/80 text-gray-800 hover:bg-white">
-                    <MdChevronRight size={120}/>
-                </button>
-            </div>
-
-        </div>
-    )
+  const prev = () => setCurrent((current) => (current == 0 ? 0 : current - 1));
+  const next = () => setCurrent((current) => (current == 3 ? 0 : current + 1));
+  return (
+    <div className="overflow-hidden relative">
+      <div
+        className="flex transition-transform ease-out duration-500 ml-10"
+        style={{ transform: `translateX(-${current * 100}%)` }}
+      >
+        {Cards}
+      </div>
+      <div className="flex items-center justify-between p-4">
+        <button
+          onClick={prev}
+          className="absolute inset-y-0 left-0 ml-5 mt-32 mb-32 rounded-full shadow bg-white/80 text-gray-800 hover:bg-white content-center items-center"
+        >
+          <MdChevronLeft size={44} className="items-center" />
+        </button>
+        <button
+          onClick={next}
+          className="absolute inset-y-0 right-0 mr-5 mt-32 mb-32 rounded-full shadow bg-white/80 text-gray-800 hover:bg-white content-center"
+        >
+          <MdChevronRight size={44} className="items-center" />
+        </button>
+      </div>
+    </div>
+  );
 }
