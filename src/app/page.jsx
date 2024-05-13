@@ -10,7 +10,7 @@ const Page = async () => {
   return (
     <div className="h-fit">
       {/* Popular Movies Added */}
-      <div className="h-full bg-white">
+      <div className="h-full">
         <div className="flex mt-10 justify-center w-full">
           <h1 className="font-bold text-2xl text-start">
             Popular Movies
@@ -28,7 +28,7 @@ const Page = async () => {
       </div>
 
       {/* Trending Movies Added */}
-      <div className="flex mt-10 justify-center w-full">
+      <div className="flex mt-10 justify-center w-full bg-white">
         <h1 className="font-bold text-2xl text-start">Trend Movies</h1>
       </div>
       <Slider slidingCards={{ trendingMovies }}>
