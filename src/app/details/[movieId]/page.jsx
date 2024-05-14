@@ -1,8 +1,10 @@
 import React from 'react'
 
-const page = () => {
+const page = ({params}) => {
+  const id=params.movieId;
+  console.log(id)
   return (
-    <div>page</div>
+    <div>{id}</div>
   )
 }
 

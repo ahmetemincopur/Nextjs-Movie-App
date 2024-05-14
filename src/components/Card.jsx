@@ -6,12 +6,12 @@ const Card = ({ movie }) => {
     <a
       href={`/details/${movie.id}`}
       className="relative flex flex-col mt-6 text-gray-700 shadow-md bg-clip-border rounded-xl h-86
-    whitespace-nowrap overflow-ellipsis transition-all align-text-top
+    whitespace-nowrap overflow-ellipsis transition-all align-text-top bg-white
     hover:scale-110 hover:whitespace-normal hover:text-left
     w-32 md:w-40 lg:w-48 xl:w-56
     items-center"
     >
-      <div className="relative place-self-center w-28 md:w-36 lg:w-44 xl:w-52 justify-center mx-4 -mt-6 text-white shadow-lg 
+      <div className="relative place-self-center w-28 md:w-36 lg:w-44 xl:w-52 justify-center mx-4 -mt-6 shadow-lg 
       bg-clip-border rounded-xl bg-blue-gray-500 shadow-blue-gray-500/40">
         <img
           className="relative"

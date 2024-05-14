@@ -11,7 +11,7 @@ export const metadata = {
 const Layout = ({children}) => {
   return (
     <html lang='en'>
-        <body>
+        <body className="bg-slate-50">
             <Header/>
             <div>
                 {children}
