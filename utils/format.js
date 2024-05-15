@@ -8,3 +8,13 @@ export function getYear(date) {
   const year = releaseDate.getFullYear();
   return year;
 }
+
+export function findDirector(crew) {
+  const director = crew.find((member) => member.job === "Director");
+
+  if (director) {
+    return director.name;
+  } else {
+    return "Unknown";
+  }
+}

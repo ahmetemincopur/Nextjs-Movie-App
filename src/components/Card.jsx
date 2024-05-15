@@ -1,5 +1,5 @@
 import React from "react";
-import { fixNumber, getYear, truncateDecimal } from "../../utils/format.js";
+import { fixNumber, getYear } from "../../utils/format.js";
 const Card = ({ movie }) => {
 
   return (
@@ -15,9 +15,8 @@ const Card = ({ movie }) => {
       bg-clip-border rounded-xl bg-blue-gray-500 shadow-blue-gray-500/40">
         <img
           className="relative"
-          src={`https://image.tmdb.org/t/p/original/${
-            movie?.poster_path || movie?.backdrop_path
-          }`}
+          src={`https://image.tmdb.org/t/p/original/${movie?.poster_path || movie?.backdrop_path
+            }`}
           alt="card-image"
         />
       </div>
@@ -32,7 +31,7 @@ const Card = ({ movie }) => {
           text-base md:text-lg lg:text-xl xl:text-2xl
           md:mb-2 md:mx-2
           lg:mb-2 lg:mx-2
-          xl:mb-2 xl:mx-2" style={{lineHeight:"1.3"}}
+          xl:mb-2 xl:mx-2" style={{ lineHeight: "1.3" }}
         >
           {movie.title}
         </span>
