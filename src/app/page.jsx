@@ -8,7 +8,7 @@ const Page = async () => {
   const trendingMovies = await getTrendingMovies();
 
   return (
-    <div className="h-fit bg-slate-50 text-gray-800">
+    <div className="h-fit bg-slate-50 text-gray-800 dark:text-white dark:bg-slate-950">
       {/* Popular Movies Added */}
       <div className="h-full">
         <div className="flex mt-10 justify-center w-[40%]">
@@ -18,7 +18,7 @@ const Page = async () => {
           </h1>
         </div>
         <Slider>
-          <div className="whitespace-nowrap scroll-smooth  w-full h-full block">
+          <div className="whitespace-nowrap scroll-smooth  w-full h-full block ">
             <div className="flex flex-row gap-10 m-6 bg-clip-border rounded-xl justify-start align-middle">
               {popularMovies.map((movie) => (
                 <Card key={movie.id} movie={movie} />
@@ -32,7 +32,7 @@ const Page = async () => {
       <div className="flex mt-10 justify-center w-[40%]">
         <h1 className="font-bold text-start underline
         text-base md:text-lg lg:text-xl xl:text-2xl">
-            Trend Movies</h1>
+          Trend Movies</h1>
       </div>
       <Slider slidingCards={{ trendingMovies }}>
         <div className="whitespace-wrap scroll-smooth  w-full h-full">

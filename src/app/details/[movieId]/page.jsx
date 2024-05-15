@@ -13,7 +13,7 @@ const page = async ({ params }) => {
     const videos = await getMovieVideos(id);
 
     return (
-        <div className="flex container h-full bg-slate-50 text-gray-800 mx-auto my-auto">
+        <div className="flex container h-full bg-slate-50 text-gray-800 mx-auto my-auto dark:bg-slate-800 dark:text-white">
             <div className="relative">
                 <div className="flex w-full justify-center
                 bg-clip-border rounded-xl bg-blue-gray-500">
@@ -23,9 +23,8 @@ const page = async ({ params }) => {
                             }`}
                         alt="card-image"
                     />
-                    {/* */}
                 </div>
-                <div className="flex w-full justify-center
+                <div className="flex w-full justify-center flex-row
                 md:flex-row">
                     <div className="relative w-[60%] content-start m-[2%]
                     md:m-[1%]">
@@ -34,9 +33,8 @@ const page = async ({ params }) => {
                             <h2 className="mb-[2%] text-start text-base md:text-lg lg:text-xl xl:text-2xl font-semibold">Director: {director}</h2>
                             <p className="text-base md:text-lg lg:text-xl xl:text-2xl">{details.overview}</p>
                         </div>
-
                     </div>
-                    <div className=" w-[30%] m-[2%]
+                    <div className=" w-[30%] m-[2%] flex
                     md:m-[1%]">
                         <div className="flex w-[100%] justify-center">
                             <img
@@ -123,9 +121,7 @@ const page = async ({ params }) => {
                                     </tbody>
                                 </table>
                             </div>
-
                         </div>
-
                     </div>
 
                 </div>

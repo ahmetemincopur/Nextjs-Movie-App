@@ -6,7 +6,7 @@ const Card = ({ movie }) => {
     <a
       href={`/details/${movie.id}`}
       className="relative flex flex-col mt-6 text-gray-700 shadow-md bg-clip-border rounded-xl h-86
-    whitespace-nowrap overflow-ellipsis transition-all align-text-top bg-white
+    whitespace-nowrap overflow-ellipsis transition-all align-text-top bg-white dark:bg-slate-800
     hover:scale-110 hover:whitespace-normal hover:text-left
     w-32 md:w-40 lg:w-48 xl:w-56
     items-center"
@@ -25,7 +25,7 @@ const Card = ({ movie }) => {
       lg:w-48 lg:h-10
       xl:w-56 xl:h-14">
         <span
-          className="font-sans text-center overflow-hidden antialiased font-semibold
+          className="font-sans text-center overflow-hidden antialiased font-semibold dark:text-white
           tracking-tight text-blue-gray-900
           align-text-left block text-ellipsis
           text-base md:text-lg lg:text-xl xl:text-2xl
@@ -36,7 +36,7 @@ const Card = ({ movie }) => {
           {movie.title}
         </span>
       </div>
-      <div className="flex content-end justify-between w-28 opacity-50 mt-4
+      <div className="flex content-end justify-between w-28 opacity-50 mt-4 dark:text-white
       md:w-36 md:mb-2 md:mx-2
       lg:w-44 lg:mb-1 lg:mx-4
       xl:w-52 xl:mx-4 xl:mb-1">
